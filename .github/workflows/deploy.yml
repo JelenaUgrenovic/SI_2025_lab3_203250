@@ -12,7 +12,7 @@ jobs:
       - name: Lint HTML
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
-          root: ./
+          root: ./html
 
   docker:
     runs-on: ubuntu-latest
@@ -41,5 +41,5 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./   # Корен на проектот каде е index.html
+          publish_dir: ./html
 
