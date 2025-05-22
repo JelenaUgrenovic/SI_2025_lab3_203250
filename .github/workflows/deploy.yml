@@ -31,7 +31,7 @@ jobs:
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/si-2025-lab3:${{ github.ref_name }}-latest
       - name: List Docker images
-      	run: docker images	
+        run: docker images
 
   github-pages:
     if: github.ref_name == 'master'
